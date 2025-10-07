@@ -1,0 +1,189 @@
+/* Container */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Fullscreen */
+  width: 100vw;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: zoomIn 1.8s ease-in-out;
+}
+
+/* Background Image */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover fullscreen */
+  animation: zoomIn 2s ease-in-out;
+}
+
+/* Dark Overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* Dark layer for contrast */
+  z-index: 1;
+}
+
+/* Content Overlay */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  z-index: 2;
+}
+
+/* Typography */
+.hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: #f1f1f1; /* Soft white */
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.hero-content h1 span {
+  color: #ffd700; /* Gold accent */
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: 25px;
+  opacity: 0.95;
+  color: #e0e0e0; /* Light gray for readability */
+  line-height: 1.6;
+  animation: slideUp 1.8s ease forwards;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: bounceIn 2s ease forwards;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 35px;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+  display: inline-block;
+}
+
+/* Primary Button */
+.start-btn {
+  background: linear-gradient(135deg, #4a0e9f, #e3e635);
+  color: #fff;
+}
+
+.start-btn:hover {
+  background: linear-gradient(135deg, #4a0e9f, #1b4bb8);
+  transform: scale(1.08);
+}
+
+/* Secondary Button */
+.learn-btn {
+  background: linear-gradient(135deg, #4a0e9f, #e3e635);
+  color: #fff;
+}
+
+.learn-btn:hover {
+  background: linear-gradient(135deg, #4a0e9f, #1b4bb8);
+  transform: scale(1.08);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.85); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1.1); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 12px 22px;
+    font-size: 1rem;
+  }
+}
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 8px 0;
+  margin: 5px 0 0 0;
+  min-width: 150px;
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background: #f1f1f1;
+}

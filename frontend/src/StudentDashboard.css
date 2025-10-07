@@ -1,0 +1,302 @@
+/* ✨ Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&family=Nunito:wght@400;600;700&display=swap");
+
+/* 🌟 Background for all sections */
+.dashboard-container,
+.section {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  color: #2c2c2c;
+  text-align: center;
+}
+
+
+
+/* 🎓 Heading Styles (your original Pacifico style retained) */
+.section h2,
+.dashboard-title {
+  font-family: "Pacifico", cursive;
+  font-size: 2.2rem;
+  color: #6a1b9a;
+  text-shadow: 2px 2px 6px rgba(123, 47, 247, 0.3);
+  margin-bottom: 25px;
+  text-align: center;
+}
+.section-bg {
+  background: url("D:\HomeWorkBuddy_f\HomeWorkBuddy\frontend\src\assets\back2Stud.jpeg") center/cover no-repeat;
+}
+
+/* 🌈 Subtitles or dashboard description */
+.dashboard-subtitle {
+  font-size: 1.1rem;
+  color: #2c2c2c;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+/* 🌈 Global font updates for content (not headings) */
+.section,
+.dashboard-container {
+  font-family: "Nunito", sans-serif;
+  color: #2d145a; /* ✅ Darker, more visible text */
+  font-size: 1.05rem;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+/* 🏆 Progress Content */
+.progress-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px 40px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.progress-box h3,
+.progress-box h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d145a; /* ✅ more visible */
+  letter-spacing: 0.4px;
+  margin: 10px 0;
+}
+
+.progress-box .points {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6a1b9a;
+  text-shadow: 0 2px 6px rgba(123, 47, 247, 0.25);
+}
+
+.progress-box .badge {
+  background: #f0f0ff;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6a1b9a;
+  box-shadow: inset 0 0 6px rgba(123, 47, 247, 0.15);
+}
+
+/* 📋 Homework List */
+.homework-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.homework-list li {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #2d145a; /* ✅ more visible text */
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.88);
+  margin: 12px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.homework-list li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(123, 47, 247, 0.25);
+}
+
+/* 🔔 Reminder Content */
+.reminder-list {
+  list-style: none;
+  padding: 0;
+  margin: 25px auto;
+  max-width: 600px;
+}
+.reminder-list li {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 15px 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #2d145a; /* ✅ better readability */
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.reminder-list li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 18px rgba(123, 47, 247, 0.25);
+}
+
+/* 📦 Upload Work Table - Enhanced & Interactive */
+.hw-table {
+  width: 85%;
+  margin: 30px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(106, 27, 154, 0.15);
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Header Row */
+.hw-table th {
+  background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1b1a1a;
+  letter-spacing: 0.6px;
+  padding: 16px 20px;
+  text-align: center;
+}
+
+/* Table Cells */
+.hw-table td {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #2d145a;
+  padding: 16px 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hw-table tr:last-child td {
+  border-bottom: none;
+}
+
+.hw-table tr:hover {
+  background: rgba(161, 140, 209, 0.08);
+  transform: scale(1.01);
+  box-shadow: 0 4px 10px rgba(106, 27, 154, 0.1);
+}
+
+/* 🎨 File Input Styling */
+.hw-table input[type="file"] {
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fafafa;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hw-table input[type="file"]:hover {
+  border-color: #a18cd1;
+  background: #f0f0ff;
+  transform: scale(1.05);
+}
+
+/* ✅ Uploaded / Pending Status */
+.uploaded {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2ecc71;
+  text-shadow: 0 1px 3px rgba(46, 204, 113, 0.25);
+}
+.pending {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff8c00;
+  text-shadow: 0 1px 3px rgba(255, 140, 0, 0.25);
+}
+
+/* 🎯 Action Buttons Column */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.action-buttons button {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease, color 0.2s ease;
+  color: #6a1b9a; /* ✅ visible default */
+}
+
+.action-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-buttons button:hover:not(:disabled) {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* 🧭 Specific Color Cues */
+.view-btn:hover {
+  color: #4a148c;
+}
+.edit-btn:hover {
+  color: #ff9800;
+}
+.delete-btn:hover {
+  color: #e53935;
+}
+
+/* 📁 File Name beside upload */
+.file-name {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.95rem;
+  color: #4a0072;
+  font-weight: 600;
+}
+
+/* 📤 Mini Upload Button */
+.upload-btn-mini {
+  background: linear-gradient(45deg, #7b2ff7, #f107a3);
+  border: none;
+  border-radius: 10px;
+  padding: 6px 14px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.upload-btn-mini:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(123, 47, 247, 0.4);
+}
+
+/* 🎀 Back Button */
+.back-btn {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  display: inline-block;
+  margin-top: 25px;
+  background: linear-gradient(45deg, #7b2ff7, #f107a3);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.back-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(123, 47, 247, 0.4);
+}
+
+/* ✨ Fade Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

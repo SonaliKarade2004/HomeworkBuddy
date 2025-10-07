@@ -1,0 +1,459 @@
+/* 🌈 Global Styles */
+.section-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0d4ff 0%, #f8e8ff 50%, #c9eaff 100%);
+  padding: 30px 50px;
+  font-family: "Outfit", "Poppins", sans-serif;
+  color: #2b0068;
+  animation: fadeIn 0.8s ease;
+  position: relative;
+  background-attachment: fixed;
+}
+
+/* ✨ Header */
+.td-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.dashboard-title {
+  font-family: "Pacifico", cursive;
+  font-size: 2.8rem;
+  color: #5f27cd;
+  text-shadow: 1px 2px 10px rgba(95, 39, 205, 0.3);
+  margin-bottom: 5px;
+}
+.dashboard-subtitle {
+  display: block;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #3c096c; /* deep indigo for visibility */
+  opacity: 0.95;
+  margin: 8px auto 18px; /* centered with breathing space */
+  font-weight: 500;
+  max-width: 600px; /* keeps it neat on large screens */
+  text-shadow: 0 1px 5px rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+.dashboard-subtitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4b0082, #9d4edd);
+  border-radius: 3px;
+  margin: 8px auto 0;
+}
+
+
+/* 🧭 Tabs */
+.td-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+.td-tabs button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #3b0764;
+  font-size: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+.td-tabs button:hover {
+  transform: translateY(-3px);
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.td-tabs button.active {
+  background: linear-gradient(135deg, #845ef7, #b197fc);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 8px 22px rgba(132, 94, 247, 0.45);
+}
+
+/* 💡 Overview Cards */
+.overview-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.overview-card {
+  flex: 1 1 260px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 22px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(132, 94, 247, 0.15);
+  backdrop-filter: blur(18px);
+  transition: all 0.35s ease;
+}
+.overview-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(132, 94, 247, 0.3);
+}
+.overview-card .icon {
+  font-size: 2.5rem;
+  color: #845ef7;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 10px rgba(132, 94, 247, 0.4);
+}
+.overview-card h3 {
+  font-size: 1.9rem;
+  margin: 0;
+  color: #2b0068;
+}
+.overview-card p {
+  font-size: 1rem;
+  opacity: 0.8;
+  color: #4b0082;
+}
+
+/* 🔘 Logout Button */
+.logout-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ff8787);
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+.logout-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.6);
+}
+
+/* 👩‍🏫 Students Section */
+.students-section {
+  padding: 30px;
+  text-align: left;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+.student-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(132, 94, 247, 0.1);
+  transition: 0.3s ease;
+}
+.student-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(132, 94, 247, 0.2);
+}
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.delete-btn {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.delete-btn:hover {
+  background: #e03131;
+}
+
+/* ⭐ Star Rating */
+.star-rating {
+  display: flex;
+  gap: 6px;
+  margin: 6px 0;
+}
+.star {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #ccc;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.star:hover {
+  transform: scale(1.2);
+}
+.star.active {
+  color: #facc15;
+  text-shadow: 0 0 8px rgba(250, 204, 21, 0.6);
+}
+
+/* 💬 Feedback Button */
+.feedback-btn {
+  background: linear-gradient(135deg, #845ef7, #9775fa);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 6px 14px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: 0.3s ease;
+}
+.feedback-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(132, 94, 247, 0.4);
+}
+
+/* 📝 Homework Section */
+.homework-section {
+  padding: 30px;
+}
+.assign-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.assign-box input[type="text"],
+.assign-box input[type="date"],
+.assign-box input[type="file"] {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 2px 6px rgba(132, 94, 247, 0.1);
+}
+.assign-box button {
+  padding: 10px 18px;
+  border: none;
+  background: linear-gradient(135deg, #845ef7, #9775fa);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.assign-box button:hover {
+  transform: scale(1.05);
+}
+.assigned-list ul {
+  list-style: none;
+  padding: 0;
+}
+.assigned-list li {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(132, 94, 247, 0.1);
+}
+
+/* 🔔 Notifications */
+.notifications-section {
+  padding: 30px;
+}
+.notif-card {
+  padding: 15px 20px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+.notif-card:hover {
+  transform: translateY(-3px);
+}
+.notif-card.warning {
+  background: linear-gradient(135deg, #fff4e6, #ffe8cc);
+  color: #d9480f;
+}
+.notif-card.success {
+  background: linear-gradient(135deg, #ebfbee, #d3f9d8);
+  color: #2b8a3e;
+}
+
+/* 📈 Analytics */
+.analytics-section {
+  padding: 30px;
+}
+.progress-item {
+  margin-bottom: 18px;
+}
+.progress-label {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #4b0082;
+  font-weight: 500;
+}
+.progress-container {
+  height: 14px;
+  border-radius: 10px;
+  background: #eee;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #845ef7, #b197fc);
+  transition: width 0.8s ease;
+}
+
+/* 💬 Modal Feedback */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+.modal-box {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 25px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.modal-box h2 {
+  margin-bottom: 12px;
+  color: #5a00c4;
+}
+.modal-box textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  resize: none;
+  font-family: inherit;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+.cancel-btn,
+.save-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.cancel-btn {
+  background: #dee2e6;
+}
+.save-btn {
+  background: linear-gradient(135deg, #845ef7, #9775fa);
+  color: white;
+}
+.save-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* 🎬 Animations */
+.fade-in {
+  animation: fadeIn 0.6s ease;
+}
+.slide-up {
+  animation: slideUp 0.4s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.section-bg {
+  background: url("./assets/teacher-back.jpg") center/cover no-repeat;
+}
+/* 🎓 Add Student Box */
+.add-student-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 18px 22px;
+  box-shadow: 0 8px 20px rgba(75, 0, 130, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-student-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(75, 0, 130, 0.25);
+}
+
+/* 🧍 Input Field */
+.add-student-box input {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  color: #3c096c;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.add-student-box input:focus {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 3px rgba(132, 94, 247, 0.4);
+}
+
+/* ➕ Add Button */
+.add-student-box button {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #845ef7, #9d4edd);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(132, 94, 247, 0.3);
+  transition: all 0.3s ease;
+}
+
+.add-student-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(132, 94, 247, 0.45);
+}
+
+.add-student-box button:active {
+  transform: scale(0.97);
+}

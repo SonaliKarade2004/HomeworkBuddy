@@ -1,0 +1,29 @@
+/* src/Dashboard.css */
+.dashboard {
+  text-align: center;
+  padding: 50px;
+}
+
+.dashboard h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.dashboard p {
+  font-size: 18px;
+  color: #666;
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px auto;
+  display: block;
+  border: 3px solid #6a11cb; /* violet border */
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}

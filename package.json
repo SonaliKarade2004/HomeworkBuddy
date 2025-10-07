@@ -1,0 +1,24 @@
+{
+  "name": "homeworkbuddy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sonalikarade2004/HomeworkBuddy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sonalikarade2004/HomeworkBuddy/issues"
+  },
+  "homepage": "https://github.com/Sonalikarade2004/HomeworkBuddy#readme",
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}

@@ -1,0 +1,106 @@
+/* Background */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Card */
+.auth-box {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: 360px;
+  text-align: center;
+}
+
+/* Header */
+.auth-header h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.role-text {
+  color: #00f2fe;
+  font-weight: bold;
+}
+
+/* Role Selection */
+.role-select {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.2rem;
+}
+
+.role-select button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #444;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-select button.active {
+  background: #00f2fe;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.9rem;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.auth-form button {
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.2s ease;
+}
+
+.auth-form button:hover {
+  transform: scale(1.05);
+}
+
+/* Switch */
+.toggle-form {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.toggle-form span {
+  color: #00f2fe;
+  cursor: pointer;
+  font-weight: bold;
+}

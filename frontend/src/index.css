@@ -1,0 +1,81 @@
+/* Bootstrap should be imported first */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Then Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Layout basics */
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial; }
+
+/* App shell */
+.app-shell { min-height: 100vh; display: flex; }
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #0d6efd;
+  color: #fff;
+  transition: transform .25s ease;
+}
+.sidebar .brand { font-weight: 800; font-size: 1.25rem; }
+.sidebar .nav-btn {
+  border: 0; background: transparent; color: #fff; text-decoration: none;
+  width: 100%; text-align: left; padding: .65rem .9rem; border-radius: .6rem;
+  display: flex; align-items: center; gap: .6rem; transition: background .2s ease, transform .15s ease;
+}
+.sidebar .nav-btn:hover { background: rgba(255,255,255,.18); transform: translateX(2px); }
+.sidebar .nav-btn.active { background: rgba(255,255,255,.32); }
+
+/* Mobile sidebar */
+@media (max-width: 991.98px) {
+  .sidebar { position: fixed; inset: 0 auto 0 0; z-index: 1040; transform: translateX(-110%); }
+  .sidebar.open { transform: translateX(0); }
+  .topbar { position: sticky; top: 0; z-index: 1030; }
+}
+
+/* Content with full-cover background image */
+.content {
+  position: relative; flex: 1; padding: 1.25rem;
+  background-image: url("./assets/student.jpg");
+  background-size: cover; background-position: center; background-attachment: fixed;
+  animation: fadeIn 700ms ease-in-out;
+}
+.content::before {
+  content: ""; position: absolute; inset: 0;
+  background: rgba(255,255,255,.80); backdrop-filter: blur(1.5px);
+}
+.content-inner { position: relative; animation: slideUp 700ms ease; }
+
+/* Landing hero */
+.landing {
+  min-height: 100vh;
+  background: radial-gradient(1200px 600px at 10% 10%, #e7f1ff 0, transparent 60%),
+              radial-gradient(900px 500px at 90% 20%, #fff3cd 0, transparent 60%),
+              radial-gradient(900px 600px at 50% 100%, #e8f5e9 0, transparent 60%),
+              #f8fafc;
+  animation: floatBg 18s ease-in-out infinite alternate;
+}
+
+/* Cards, elevation, animations */
+.card { border: 0; border-radius: 1rem; }
+.elevate { box-shadow: 0 10px 24px rgba(0,0,0,.08); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(14px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes floatBg { 0%{ background-position:0 0, 0 0, 0 0; } 100%{ background-position:20px -30px,-25px 10px,15px -20px; } }
+.animate { animation: slideUp 0.6s ease both; }
+
+/* Chat bubbles */
+.chat-bubble {
+  padding: .5rem .75rem; border-radius: 1rem; max-width: 70%;
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
+}
+.chat-bubble.user { background: #0d6efd; color: #fff; border-bottom-right-radius: .3rem; }
+.chat-bubble.bot  { background: #eef2ff; color: #111; border-bottom-left-radius: .3rem; }
+
+/* Section title */
+.section-title { font-weight: 800; letter-spacing: .2px; }

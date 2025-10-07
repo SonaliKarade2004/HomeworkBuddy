@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.leaderboard-container {
+  padding: 40px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0, #667eea, #764ba2);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  color: white;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.leaderboard-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.leaderboard-table {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+thead {
+  background: #f5f5f5;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+tr {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+tr:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Highlight top 3 ranks */
+.rank-1 { background: #fff8dc; } /* light gold */
+.rank-2 { background: #f0f8ff; } /* light silver */
+.rank-3 { background: #fff5ee; } /* light bronze */
+
+/* Badges */
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.badge.gold { background: linear-gradient(45deg, #FFD700, #FFA500); }
+.badge.silver { background: linear-gradient(45deg, #C0C0C0, #A9A9A9); }
+.badge.bronze { background: linear-gradient(45deg, #cd7f32, #8b4513); }
+.badge.participant { background: linear-gradient(45deg, #6a11cb, #2575fc); }

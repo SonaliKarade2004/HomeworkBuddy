@@ -1,0 +1,133 @@
+/* Overall container */
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  background: linear-gradient(to right, #dee9f7, #f0f4ff);
+}
+
+/* Card layout */
+.contact-card {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Left side: form */
+.form-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-side h2 {
+  font-size: 30px;
+  color: #2c2c54;
+  margin-bottom: 25px;
+}
+
+.form-side h2 span {
+  color: #7b4dff;
+}
+
+.form-side form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-side input,
+.form-side textarea {
+  padding: 14px 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-side input:focus,
+.form-side textarea:focus {
+  border-color: #7b4dff;
+  box-shadow: 0 0 0 3px rgba(123, 77, 255, 0.2);
+  background-color: #fff;
+  outline: none;
+}
+
+.form-side button {
+  background-color: #7b4dff;
+  color: white;
+  font-size: 16px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-side button:hover {
+  background-color: #6a3eea;
+}
+
+/* Right side: image */
+.image-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-side img {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  animation: popIn 0.8s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .image-side img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
